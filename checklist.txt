@@ -1,0 +1,34 @@
+🏁 Fase 1: Setup e Infraestrutura
+- Configurar Git/GitHub ✅
+- Instalar Vite + React + ts + pnpm ✅
+- Configurar Tailwind (Cores no tailwind.config.js)
+- Limpar arquivos padrão do Vite ✅
+
+🎨 Fase 2: Componentes Base
+- Componente <Text />
+- Componente <Button />
+- Componente <Card />
+- Componente <Container />
+
+🏗️ Fase 3: Estrutura de Layout
+- <Navbar /> (Menu e Logo)
+- <Hero /> (Título principal e CTA)
+- <Stats /> (Faixa de números/estatísticas)
+- <Services /> (Grid de 3 cards principais)
+- <Steps /> (Seção "Pronto em 3 passos")
+- <Testimonials /> (Seção de depoimentos)
+- <FAQ /> (Acordions de perguntas frequentes)
+- <Footer /> (Rodapé escuro e contatos)
+
+📱 Fase 4: Refinamento e Interatividade
+- Menu Mobile (Hambúrguer)
+- Link direto para WhatsApp no botão CTA
+- Revisar Responsividade (Desktop vs Mobile)
+- Otimizar Imagens (Converter para WebP)
+
+🚀 Fase 5: Deploy e Entrega
+- Configurar Meta Tags (Título e Descrição SEO)
+- Adicionar Favicon da DSR
+- Rodar 'pnpm build' (Check de erros)
+- Deploy na Vercel/Netlify
+- Apontar Domínio Final

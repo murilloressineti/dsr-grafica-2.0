@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+
+  /* Neutral Colors */
+
+  /* Text Colors */
+
+  /* Background Colors */
+
+  /* Border Colors */
+
+  /* Interactive Colors  */
+
+  /* Font Family */
+  --font-sans: "Manrope", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
