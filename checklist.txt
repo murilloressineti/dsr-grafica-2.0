@@ -1,11 +1,12 @@
 🏁 Fase 1: Setup e Infraestrutura
 - Configurar Git/GitHub ✅
 - Instalar Vite + React + ts + pnpm ✅
-- Configurar Tailwind (Cores no tailwind.config.js)
+- Configurar Tailwind (Cores no tailwind.config.js) ✅
 - Limpar arquivos padrão do Vite ✅
 
 🎨 Fase 2: Componentes Base
-- Componente <Text />
+- Componente <Text /> ✅
+- Componente <Icon /> ✅
 - Componente <Button />
 - Componente <Card />
 - Componente <Container />

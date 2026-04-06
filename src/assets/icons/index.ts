@@ -1,0 +1,17 @@
+export { default as ArrowUpRight } from "./ArrowUpRight.svg?react";
+export { default as BuildingOffice } from "./BuildingOffice.svg?react";
+export { default as CaretDown } from "./CaretDown.svg?react";
+export { default as CaretLeft } from "./CaretLeft.svg?react";
+export { default as CaretRight } from "./CaretRight.svg?react";
+export { default as CaretUp } from "./CaretUp.svg?react";
+export { default as Clock } from "./Clock.svg?react";
+export { default as Coins } from "./Coins.svg?react";
+export { default as Envelope } from "./Envelope.svg?react";
+export { default as Files } from "./Files.svg?react";
+export { default as GraduationCap } from "./GraduationCap.svg?react";
+export { default as MapPin } from "./MapPin.svg?react";
+export { default as Package } from "./Package.svg?react";
+export { default as Phone } from "./Phone.svg?react";
+export { default as Star } from "./Star.svg?react";
+export { default as StarHalf } from "./StarHalf.svg?react";
+export { default as WhatsappLogo } from "./WhatsappLogo.svg?react";
