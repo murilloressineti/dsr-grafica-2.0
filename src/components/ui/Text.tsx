@@ -23,8 +23,8 @@ export const textVariants = cva("font-sans antialiased", {
       "body-sm": "text-sm leading-snug md:leading-normal font-normal",
 
       // CTA (Botões)
-      "cta-lg": "text-base leading-none font-semibold",
-      "cta-md": "text-sm leading-none font-semibold",
+      "cta-lg": "text-base leading-none font-semibold uppercase",
+      "cta-md": "text-sm leading-none font-semibold uppercase",
 
       // OVERLINE
       "overline-md": "text-sm leading-none tracking-widest font-normal",

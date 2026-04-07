@@ -7,9 +7,10 @@
 🎨 Fase 2: Componentes Base
 - Componente <Text /> ✅
 - Componente <Icon /> ✅
-- Componente <Button />
+- Componente <Button /> ☑️
+- Componente <Badge />
 - Componente <Card />
-- Componente <Container />
+- Componente <Section /> ✅
 
 🏗️ Fase 3: Estrutura de Layout
 - <Navbar /> (Menu e Logo)

@@ -8,6 +8,7 @@ export const iconVariants = cva(
     variants: {
       animate: {
         none: "",
+        rotate: "group-hover:rotate-45",
       },
       size: {
         sm: "w-4 h-4",

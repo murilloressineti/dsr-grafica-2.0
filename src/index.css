@@ -5,9 +5,11 @@
 
   /* Brand Colors */
   --color-brand-primary: #00afef;
+  --color-brand-secondary: #008ABD;
   --color-brand-primary-hover: rgba(0, 0, 0, 0.1);
 
   /* Neutral Colors */
+  --color-neutral-white: #ffffff;
   --color-neutral-100: #fcfcfd;
   --color-neutral-200: #f2f4f7;
   --color-neutral-300: #eaecf0;
@@ -22,6 +24,7 @@
   --color-text-inverted: var(--color-neutral-100);
 
   /* Background Colors */
+  --color-bg-white: var(--color-neutral-white);
   --color-bg-light: var(--color-neutral-100);
   --color-bg-default: var(--color-neutral-200);
   --color-bg-subtle: var(--color-neutral-300);
