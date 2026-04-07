@@ -7,8 +7,9 @@
 🎨 Fase 2: Componentes Base
 - Componente <Text /> ✅
 - Componente <Icon /> ✅
-- Componente <Button /> ☑️
+- Componente <Button /> ✅
 - Componente <Badge />
+- Componente <BadgeServices />
 - Componente <Card />
 - Componente <Section /> ✅
 

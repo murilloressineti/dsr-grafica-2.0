@@ -108,17 +108,17 @@ export default function App() {
         </Button>
 
         <Button variant={"tertiary"} size={"sm"}>
-          <Icon svg={CaretLeft} className="fill-text-primary" />
+          <Icon svg={CaretLeft} size={"sm"} className="fill-text-primary" />
         </Button>
 
         <Button variant={"secondary"} size={"sm"}>
-          <Icon svg={CaretRight} className="fill-text-inverted" />
+          <Icon svg={CaretRight} size={"sm"} className="fill-text-inverted" />
         </Button>
       </div>
 
       {/* Section */}
       <Section>
-        <div className="flex gap-12 items-center justify-center">
+        <div className="max-w-300 mx-auto flex flex-col gap-6 md:flex-row items-center justify-between">
           <div className="flex flex-col gap-3 items-center">
             <Text variant={"display-lg"}>43</Text>
             <Text variant={"body-lg"} TextColor={"secondary"}>

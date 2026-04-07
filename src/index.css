@@ -5,16 +5,19 @@
 
   /* Brand Colors */
   --color-brand-primary: #00afef;
-  --color-brand-secondary: #008ABD;
-  --color-brand-primary-hover: rgba(0, 0, 0, 0.1);
+  --color-brand-secondary: #008abd;
+  --color-brand-primary-hover: #0095cc;
 
   /* Neutral Colors */
   --color-neutral-white: #ffffff;
   --color-neutral-100: #fcfcfd;
   --color-neutral-200: #f2f4f7;
   --color-neutral-300: #eaecf0;
+  --color-neutral-400: #d0d5dd;
+  --color-neutral-500: #98a2b3;
   --color-neutral-600: #667085;
   --color-neutral-700: #344054;
+  --color-neutral-800: #1d2939;
   --color-neutral-900: #0c111d;
 
   /* Text Colors */
