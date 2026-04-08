@@ -1,4 +1,4 @@
-import { Button, Icon, Text } from "@components/ui";
+import { Badge, Button, Icon, IconBox, Text } from "@components/ui";
 import { Section } from "@components/layout";
 
 import {
@@ -114,6 +114,20 @@ export default function App() {
         <Button variant={"secondary"} size={"sm"}>
           <Icon svg={CaretRight} size={"sm"} className="fill-text-inverted" />
         </Button>
+      </div>
+
+      {/* BADGE */}
+      <div className="flex gap-3 p-10">
+        <Badge>Guarulhos</Badge>
+
+        <Badge variant={"outline"}>Desde 1982</Badge>
+      </div>
+
+      {/* ICONBOX */}
+      <div className="flex gap-4">
+        <IconBox icon={GraduationCap} />
+        <IconBox icon={Files} />
+        <IconBox icon={BuildingOffice} />
       </div>
 
       {/* Section */}

@@ -8,9 +8,10 @@
 - Componente <Text /> ✅
 - Componente <Icon /> ✅
 - Componente <Button /> ✅
-- Componente <Badge />
-- Componente <BadgeServices />
-- Componente <Card />
+- Componente <Badge /> ✅
+- Componente <IconBox /> ✅
+- Componente <ServiceCard />
+- Componente <TestimonialCard />
 - Componente <Section /> ✅
 
 🏗️ Fase 3: Estrutura de Layout
@@ -24,10 +25,9 @@
 - <Footer /> (Rodapé escuro e contatos)
 
 📱 Fase 4: Refinamento e Interatividade
-- Menu Mobile (Hambúrguer)
+- Animações
 - Link direto para WhatsApp no botão CTA
 - Revisar Responsividade (Desktop vs Mobile)
-- Otimizar Imagens (Converter para WebP)
 
 🚀 Fase 5: Deploy e Entrega
 - Configurar Meta Tags (Título e Descrição SEO)

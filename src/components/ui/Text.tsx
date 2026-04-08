@@ -7,9 +7,9 @@ export const textVariants = cva("font-sans antialiased", {
     variant: {
       // DISPLAY
       "display-xl":
-        "text-4xl md:text-7xl leading-tight tracking-tight md:tracking-tighter font-normal",
+        "text-4xl md:text-7xl leading-tight tracking-tight md:tracking-tighter font-medium",
       "display-lg":
-        "text-3xl md:text-6xl leading-tight tracking-tight md:tracking-tighter font-normal",
+        "text-3xl md:text-6xl leading-tight tracking-tight md:tracking-tighter font-medium",
 
       // HEADING
       h1: "text-2xl md:text-4xl leading-tight tracking-tight md:tracking-tight font-medium",
@@ -27,8 +27,8 @@ export const textVariants = cva("font-sans antialiased", {
       "cta-md": "text-sm leading-none font-semibold uppercase",
 
       // OVERLINE
-      "overline-md": "text-sm leading-none tracking-widest font-normal",
-      "overline-sm": "text-xs leading-none tracking-wider font-normal",
+      "overline-md": "text-sm leading-snug tracking-widest font-medium",
+      "overline-sm": "text-xs leading-tight tracking-wider font-medium",
     },
     TextColor: {
       primary: "text-text-primary",
