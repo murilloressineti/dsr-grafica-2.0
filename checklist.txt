@@ -10,8 +10,8 @@
 - Componente <Button /> ✅
 - Componente <Badge /> ✅
 - Componente <IconBox /> ✅
-- Componente <ServiceCard />
-- Componente <TestimonialCard />
+- Componente <ServiceCard /> ✅
+- Componente <TestimonialCard /> ☑️
 - Componente <Section /> ✅
 
 🏗️ Fase 3: Estrutura de Layout

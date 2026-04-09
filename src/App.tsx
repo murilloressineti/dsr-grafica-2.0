@@ -1,5 +1,6 @@
 import { Badge, Button, Icon, IconBox, Text } from "@components/ui";
 import { Section } from "@components/layout";
+import { ServiceCard, TestimonialCard } from "./components/features";
 
 import {
   ArrowUpRight,
@@ -175,8 +176,102 @@ export default function App() {
               serviço.
             </Text>
           </div>
+
+          {/* ServiceCard */}
+          <div className="flex gap-5 md:gap-10 justify-between">
+            {[
+              {
+                icon: GraduationCap,
+                category: "Para Estudantes",
+                title: "Trabalhos Acadêmicos",
+                description:
+                  "Agilidade em impressões e encadernações para seus trabalhos e projetos",
+                items: [
+                  "Encadernação espiral e capa dura",
+                  "Impressão de TCC",
+                  "Cópias P&B e coloridas",
+                  "Digitalização de documentos",
+                ],
+              },
+              {
+                icon: Files,
+                category: "Para Comércios",
+                title: "Material de divulgação",
+                description:
+                  "Divulgação rápida com banners e panfletos para destacar seu negócio local",
+                items: [
+                  "Banners e cartazes",
+                  "Panfletos",
+                  "Adesivos personalizados",
+                  "Cardápios",
+                ],
+              },
+              {
+                icon: BuildingOffice,
+                category: "Para Profissionais",
+                title: "Documentos e artes gráficas",
+                description:
+                  "Digitalização e impressões de alto padrão para sua autoridade profissional",
+                items: [
+                  "Impressão de contratos",
+                  "Plastificação",
+                  "Digitalização",
+                  "Serviços gráficos",
+                  "Impressão offset",
+                ],
+              },
+            ].map((item, index) => (
+              <ServiceCard
+                key={index}
+                icon={item.icon}
+                category={item.category}
+                title={item.title}
+                description={item.description}
+                items={item.items}
+              />
+            ))}
+          </div>
         </div>
       </Section>
+
+      {/* TestimonialCard */}
+      <div className="flex gap-10 p-10 my-10">
+        {[
+          {
+            rating: 4.5,
+            testimonial:
+              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+            name: "Ana Lima",
+            role: "Estudante universitária",
+            avatarUrl: undefined,
+          },
+          {
+            rating: 4.5,
+            testimonial:
+              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+            name: "Ana Lima",
+            role: "Estudante universitária",
+            avatarUrl: undefined,
+          },
+          {
+            rating: 4.5,
+            testimonial:
+              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+            name: "Ana Lima",
+            role: "Estudante universitária",
+            avatarUrl: undefined,
+          },
+        ].map((item, index) => (
+          <TestimonialCard
+            key={index}
+            rating={item.rating}
+            testimonial={item.testimonial}
+            name={item.name}
+            role={item.role}
+            avatarUrl={item.avatarUrl}
+          />
+        ))}
+      </div>
     </div>
   );
 }

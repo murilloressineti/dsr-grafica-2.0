@@ -27,8 +27,10 @@ export const textVariants = cva("font-sans antialiased", {
       "cta-md": "text-sm leading-none font-semibold uppercase",
 
       // OVERLINE
-      "overline-md": "text-sm leading-snug tracking-widest font-medium",
-      "overline-sm": "text-xs leading-tight tracking-wider font-medium",
+      "overline-md":
+        "text-sm leading-snug tracking-widest font-medium uppercase",
+      "overline-sm":
+        "text-xs leading-tight tracking-wider font-medium uppercase",
     },
     TextColor: {
       primary: "text-text-primary",

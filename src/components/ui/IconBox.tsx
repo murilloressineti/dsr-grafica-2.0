@@ -12,8 +12,8 @@ export default function IconBox({ icon, className, ...props }: IconBoxProps) {
       className={cn(
         "group relative flex items-center justify-center ",
         "w-12 h-12 rounded-lg",
-        "bg-[#F8FAFC] shadow-xl",
-        "border border-neutral-500",
+        "bg-[#F8FAFC] shadow-md",
+        "border border-neutral-400",
         className,
       )}
       {...props}
