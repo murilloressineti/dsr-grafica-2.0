@@ -20,17 +20,17 @@ const RatingStars = ({ rating }: { rating: number }) => {
         <defs>
           <linearGradient id="half-star-gradient">
             <stop offset="50%" stopColor="#FFB812" />
-            <stop offset="50%" stopColor="#fcfcfd" />{" "}
+            <stop offset="50%" stopColor="#fcfcfd" />
             {/* Cor da estrela vazia */}
           </linearGradient>
         </defs>
       </svg>
 
-      {[...Array(5)].map((_, index) => {
+      {[...Array(5)].map((_, index) => { // Cria um array de 5 elementos para as estrelas
         const starNumber = index + 1;
 
         // Estrela cheia
-        if (starNumber <= Math.floor(rating)) {
+        if (starNumber <= Math.floor(rating)) { // Se o número da estrela for menor ou igual ao valor inteiro do rating, é uma estrela cheia
           return (
             <Star
               key={index}
@@ -40,7 +40,7 @@ const RatingStars = ({ rating }: { rating: number }) => {
         }
 
         // Estrela metade (se o rating for x.5)
-        if (starNumber === Math.ceil(rating) && rating % 1 !== 0) {
+        if (starNumber === Math.ceil(rating) && rating % 1 !== 0) { // Se o número da estrela for igual ao valor arredondado para cima do rating e o rating tiver uma parte decimal, é uma estrela metade
           return (
             <Star
               key={index}
@@ -51,7 +51,7 @@ const RatingStars = ({ rating }: { rating: number }) => {
         }
 
         // Estrela vazia
-        return (
+        return ( // Caso contrário, é uma estrela vazia
           <Star
             key={index}
             className="w-6 h-6 fill-neutral-100 text-[#FFB812]"

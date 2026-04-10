@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Text from "./Text";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center transition-all duration-300 cursor-pointer group antialiased rounded-md gap-2 shadow-sm hover:shadow-md",
+  "inline-flex items-center justify-center transition-all duration-300 cursor-pointer group antialiased rounded-md gap-2 shadow-sm hover:shadow-md shrink-0",
   {
     variants: {
       variant: {

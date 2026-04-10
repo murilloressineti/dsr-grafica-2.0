@@ -1,6 +1,6 @@
-import { Badge, Button, Icon, IconBox, Text } from "@components/ui";
-import { Section } from "@components/layout";
-import { ServiceCard, TestimonialCard } from "./components/features";
+import { Badge, Button, Icon, Text } from "@components/ui";
+import { Header, Section } from "@components/layout";
+import { ServiceCard, TestimonialCard } from "@components/features";
 
 import {
   ArrowUpRight,
@@ -25,56 +25,8 @@ import {
 export default function App() {
   return (
     <div className="bg-bg-default">
-      {/* TEXT */}
-      <div className="bg-bg-subtle">
-        <Text as="h1" variant={"display-xl"} TextColor="primary">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"display-lg"} TextColor="primary">
-          Olá, mundo!
-        </Text>
-
-        <Text as="h1" TextColor="secondary">
-          Olá, mundo!
-        </Text>
-
-        <Text as="h2" TextColor="secondary">
-          Olá, mundo!
-        </Text>
-
-        <Text as="h3" TextColor="secondary">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"body-lg"} TextColor="tertiary">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"body-md"} TextColor="tertiary">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"body-sm"} TextColor="tertiary">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"cta-lg"} TextColor="inverted">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"cta-md"} TextColor="inverted">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"overline-md"} TextColor="brand">
-          Olá, mundo!
-        </Text>
-
-        <Text variant={"overline-sm"} TextColor="brand">
-          Olá, mundo!
-        </Text>
-      </div>
+      {/* HEADER */}
+      <Header />
 
       {/* ICON */}
       <div className="flex">
@@ -122,13 +74,6 @@ export default function App() {
         <Badge>Guarulhos</Badge>
 
         <Badge variant={"outline"}>Desde 1982</Badge>
-      </div>
-
-      {/* ICONBOX */}
-      <div className="flex gap-4">
-        <IconBox icon={GraduationCap} />
-        <IconBox icon={Files} />
-        <IconBox icon={BuildingOffice} />
       </div>
 
       {/* Section */}
