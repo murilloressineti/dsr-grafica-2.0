@@ -11,7 +11,7 @@ export default function Section({ id, children, className }: SectionProps) {
   return (
     <section
       id={id}
-      className={cn("w-full py-12 md:py-16 lg:py-20 border", className)}
+      className={cn("w-full py-12 md:py-16 lg:py-20", className)}
     >
       <div className={cn("max-w-360 mx-auto")}>
         {children}

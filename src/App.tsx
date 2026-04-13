@@ -23,86 +23,41 @@ import {
 } from "./assets/icons";
 
 export default function App() {
+  const stats = [
+    { value: "43", label: "Anos no mercado gráfico" },
+    { value: "+15", label: "Serviços disponíveis" },
+    { value: "1 dia", label: "Prazo de entrega" },
+    { value: "100%", label: "Atendimento humano" },
+  ];
+
   return (
     <div className="bg-bg-default pt-20">
       {/* HEADER */}
       <Header />
 
-      {/* ICON */}
-      <div className="flex">
-        <Icon svg={ArrowUpRight} className="fill-brand-primary" />
-        <Icon svg={BuildingOffice} className="fill-brand-primary" />
-        <Icon svg={CaretDown} />
-        <Icon svg={CaretLeft} className="fill-brand-primary" />
-        <Icon svg={CaretRight} className="fill-brand-primary" />
-        <Icon svg={CaretUp} className="fill-brand-primary" />
-        <Icon svg={Clock} className="fill-brand-primary" />
-        <Icon svg={Coins} />
-        <Icon svg={Envelope} className="fill-brand-primary" />
-        <Icon svg={Files} className="fill-brand-primary" />
-        <Icon svg={GraduationCap} className="fill-brand-primary" />
-        <Icon svg={MapPin} className="fill-brand-primary" />
-        <Icon svg={Package} />
-        <Icon svg={Phone} className="fill-brand-primary" />
-        <Icon svg={Star} />
-        <Icon svg={StarHalf} className="fill-brand-primary" />
-        <Icon svg={WhatsappLogo} className="fill-brand-primary" />
-      </div>
-
-      {/* BUTTON */}
-      <div>
-        <Button>
-          Pedir orçamento em minutos{" "}
-          <Icon
-            svg={ArrowUpRight}
-            animate={"rotate"}
-            className="fill-text-primary"
-          />
-        </Button>
-        <Button variant={"tertiary"} size={"sm"}>
-          <Icon svg={CaretLeft} size={"sm"} className="fill-text-primary" />
-        </Button>
-        <Button variant={"secondary"} size={"sm"}>
-          <Icon svg={CaretRight} size={"sm"} className="fill-text-inverted" />
-        </Button>
-      </div>
-
-      {/* BADGE */}
-      <div className="flex gap-3 p-10">
-        <Badge>Guarulhos</Badge>
-        <Badge variant={"outline"}>Desde 1982</Badge>
-      </div>
-
-      {/* Section */}
-      <Section>
+      {/* Stats */}
+      <Section className="py-12 md:py-24 lg:py-30 border">
         <div className="max-w-300 mx-auto flex flex-col gap-6 md:flex-row items-center justify-between">
-          <div className="flex flex-col gap-3 items-center">
-            <Text variant={"display-lg"}>43</Text>
-            <Text variant={"body-lg"} TextColor={"secondary"}>
-              Anos no mercado gráfico
-            </Text>
-          </div>
-          <div className="flex flex-col gap-3 items-center">
-            <Text variant={"display-lg"}>+15</Text>
-            <Text variant={"body-lg"} TextColor={"secondary"}>
-              Serviços disponíveis
-            </Text>
-          </div>
-          <div className="flex flex-col gap-3 items-center">
-            <Text variant={"display-lg"}>1 dia</Text>
-            <Text variant={"body-lg"} TextColor={"secondary"}>
-              Prazo de entrega
-            </Text>
-          </div>
-          <div className="flex flex-col gap-3 items-center">
-            <Text variant={"display-lg"}>100%</Text>
-            <Text variant={"body-lg"} TextColor={"secondary"}>
-              Atendimento humano
-            </Text>
-          </div>
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-4 md:gap-3 items-center text-center"
+            >
+              <Text
+                variant={"display-lg"}
+                className="text-4xl md:font-medium font-bold"
+              >
+                {stat.value}
+              </Text>
+              <Text variant={"body-lg"} TextColor={"secondary"}>
+                {stat.label}
+              </Text>
+            </div>
+          ))}
         </div>
       </Section>
 
+      {/* Services */}
       <Section>
         <div className="p-16 bg-bg-white rounded-4xl">
           <div className="flex flex-col gap-4 items-center ">
@@ -174,43 +129,45 @@ export default function App() {
       </Section>
 
       {/* TestimonialCard */}
-      <div className="flex gap-10 p-10 my-10">
-        {[
-          {
-            rating: 4.5,
-            testimonial:
-              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
-            name: "Ana Lima",
-            role: "Estudante universitária",
-            avatarUrl: undefined,
-          },
-          {
-            rating: 4.5,
-            testimonial:
-              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
-            name: "Ana Lima",
-            role: "Estudante universitária",
-            avatarUrl: undefined,
-          },
-          {
-            rating: 4.5,
-            testimonial:
-              "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
-            name: "Ana Lima",
-            role: "Estudante universitária",
-            avatarUrl: undefined,
-          },
-        ].map((item, index) => (
-          <TestimonialCard
-            key={index}
-            rating={item.rating}
-            testimonial={item.testimonial}
-            name={item.name}
-            role={item.role}
-            avatarUrl={item.avatarUrl}
-          />
-        ))}
-      </div>
+      <Section>
+        <div className="flex gap-10 p-10 my-10">
+          {[
+            {
+              rating: 4.5,
+              testimonial:
+                "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+              name: "Ana Lima",
+              role: "Estudante universitária",
+              avatarUrl: undefined,
+            },
+            {
+              rating: 4.5,
+              testimonial:
+                "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+              name: "Ana Lima",
+              role: "Estudante universitária",
+              avatarUrl: undefined,
+            },
+            {
+              rating: 4.5,
+              testimonial:
+                "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
+              name: "Ana Lima",
+              role: "Estudante universitária",
+              avatarUrl: undefined,
+            },
+          ].map((item, index) => (
+            <TestimonialCard
+              key={index}
+              rating={item.rating}
+              testimonial={item.testimonial}
+              name={item.name}
+              role={item.role}
+              avatarUrl={item.avatarUrl}
+            />
+          ))}
+        </div>
+      </Section>
     </div>
   );
 }
