@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button, Icon, Text } from "../ui";
 import { Logo } from "@/assets/logo";
@@ -6,6 +6,15 @@ import { CaretRight, Close, HamburgerMenu } from "@assets/icons";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Serviços", href: "/services" },
@@ -15,7 +24,14 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full h-20 bg-neutral-100 backdrop-blur-sm sticky top-0 z-50 ">
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out",
+        isScrolled
+          ? "bg-transparent backdrop-blur-md border-b border-neutral-200 shadow-sm h-20"
+          : "bg-neutral-white border-b border-transparent h-20",
+      )}
+    >
       <div className="max-w-360 px-6 md:px-30 mx-auto h-full flex items-center justify-between">
         {/* Logo */}
         <div className="cursor-pointer shrink-0">

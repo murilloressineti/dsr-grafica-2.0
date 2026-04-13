@@ -24,7 +24,7 @@ import {
 
 export default function App() {
   return (
-    <div className="bg-bg-default">
+    <div className="bg-bg-default pt-20">
       {/* HEADER */}
       <Header />
 
@@ -59,11 +59,9 @@ export default function App() {
             className="fill-text-primary"
           />
         </Button>
-
         <Button variant={"tertiary"} size={"sm"}>
           <Icon svg={CaretLeft} size={"sm"} className="fill-text-primary" />
         </Button>
-
         <Button variant={"secondary"} size={"sm"}>
           <Icon svg={CaretRight} size={"sm"} className="fill-text-inverted" />
         </Button>
@@ -72,7 +70,6 @@ export default function App() {
       {/* BADGE */}
       <div className="flex gap-3 p-10">
         <Badge>Guarulhos</Badge>
-
         <Badge variant={"outline"}>Desde 1982</Badge>
       </div>
 
@@ -85,21 +82,18 @@ export default function App() {
               Anos no mercado gráfico
             </Text>
           </div>
-
           <div className="flex flex-col gap-3 items-center">
             <Text variant={"display-lg"}>+15</Text>
             <Text variant={"body-lg"} TextColor={"secondary"}>
               Serviços disponíveis
             </Text>
           </div>
-
           <div className="flex flex-col gap-3 items-center">
             <Text variant={"display-lg"}>1 dia</Text>
             <Text variant={"body-lg"} TextColor={"secondary"}>
               Prazo de entrega
             </Text>
           </div>
-
           <div className="flex flex-col gap-3 items-center">
             <Text variant={"display-lg"}>100%</Text>
             <Text variant={"body-lg"} TextColor={"secondary"}>
