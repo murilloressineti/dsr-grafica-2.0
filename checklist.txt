@@ -11,7 +11,7 @@
 - Componente <Badge /> ✅
 - Componente <IconBox /> ✅
 - Componente <ServiceCard /> ✅
-- Componente <TestimonialCard /> ☑️
+- Componente <TestimonialCard /> ✅
 - Componente <Section /> ✅
 
 🏗️ Fase 3: Estrutura de Layout
