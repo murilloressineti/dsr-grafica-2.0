@@ -57,7 +57,14 @@ export default function Header() {
 
         {/* Button */}
         <div className="hidden md:block">
-          <Button variant={"tertiary"} size={"sm"}>
+          <Button
+            as="a"
+            href="#" // Link
+            target="_blank"
+            rel="noopener"
+            variant={"tertiary"}
+            size={"sm"}
+          >
             Pedir orçamento{" "}
             <Icon
               svg={CaretRight}
@@ -124,7 +131,15 @@ export default function Header() {
           </nav>
 
           <div className="w-full mt-10">
-            <Button variant={"primary"} size={"sm"} className="w-full">
+            <Button
+              as="a"
+              href="#" // Link
+              target="_blank"
+              rel="noopener"
+              variant={"primary"}
+              size={"sm"}
+              className="w-full"
+            >
               Pedir orçamento
               <Icon
                 svg={CaretRight}

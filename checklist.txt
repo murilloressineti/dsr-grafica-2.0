@@ -18,10 +18,12 @@
 - <Navbar /> (Menu e Logo) ✅
 - <Hero /> (Título principal e CTA)
 - <Stats /> (Faixa de números/estatísticas) ✅
-- <Services /> (Grid de 3 cards principais)
+- <Services /> (Grid de 3 cards principais) ✅
 - <Steps /> (Seção "Pronto em 3 passos")
+- <Differential />
 - <Testimonials /> (Seção de depoimentos)
 - <FAQ /> (Acordions de perguntas frequentes)
+- <CTA /> 
 - <Footer /> (Rodapé escuro e contatos)
 
 📱 Fase 4: Refinamento e Interatividade

@@ -29,12 +29,12 @@ export default function ServiceCard({
     >
       <IconBox icon={icon} className="mb-9" />
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 ">
         <Text variant={"overline-md"} className="text-neutral-500">
           {category}
         </Text>
 
-        <Text as="h3" variant={"h2"} className="w-1/2">
+        <Text as="h3" variant={"h2"} className="w-2/3">
           {title}
         </Text>
 
