@@ -1,6 +1,6 @@
 import { Badge, Button, Icon, Text } from "@components/ui";
 import { Header, Section } from "@components/layout";
-import { ServicesSection, StatsSection } from "@components/sections";
+import { HeroSection, ServicesSection, StatsSection } from "@components/sections";
 import { TestimonialCard } from "@components/features";
 
 import {
@@ -28,6 +28,9 @@ export default function App() {
     <div className="bg-bg-default pt-20">
       {/* HEADER */}
       <Header />
+
+      {/* HERO */}
+      <HeroSection />
 
       {/* Stats */}
       <StatsSection />
