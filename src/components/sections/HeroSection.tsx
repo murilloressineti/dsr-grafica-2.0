@@ -9,9 +9,15 @@ export default function HeroSection() {
       className="relative w-full pt-8 pb-8 md:pt-20 md:pb-30 lg:pt-20 lg:pb-30 overflow-hidden"
     >
       {/* Background com degradê sutil do design */}
-      <div />
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-50"
+        style={{
+          background:
+            "radial-gradient(circle at top, #61B5DB 0%, rgba(255, 255, 255, 0) 70%)",
+        }}
+      />
 
-      <div className="mx-auto px-6 md:px-30 flex flex-col items-center text-center">
+      <div className="relative z-10 mx-auto px-6 md:px-30 flex flex-col items-center text-center">
         {/* Badges Superiores */}
         <div className="flex gap-3 mb-5">
           <Badge variant="default">Guarulhos</Badge>

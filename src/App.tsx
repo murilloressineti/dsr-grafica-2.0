@@ -1,27 +1,10 @@
-import { Badge, Button, Icon, Text } from "@components/ui";
 import { Header, Section } from "@components/layout";
-import { HeroSection, ServicesSection, StatsSection } from "@components/sections";
-import { TestimonialCard } from "@components/features";
-
 import {
-  ArrowUpRight,
-  BuildingOffice,
-  CaretDown,
-  CaretLeft,
-  CaretRight,
-  CaretUp,
-  Clock,
-  Coins,
-  Envelope,
-  Files,
-  GraduationCap,
-  MapPin,
-  Package,
-  Phone,
-  Star,
-  StarHalf,
-  WhatsappLogo,
-} from "./assets/icons";
+  HeroSection,
+  ServicesSection,
+  StatsSection,
+} from "@components/sections";
+import { TestimonialCard } from "@components/features";
 
 export default function App() {
   return (
@@ -39,8 +22,8 @@ export default function App() {
       <ServicesSection />
 
       {/* TestimonialCard */}
-      <Section>
-        <div className="flex gap-10 p-10 my-10">
+      <Section className="p-0">
+        <div className="flex gap-10 p-10 border">
           {[
             {
               rating: 4.5,

@@ -16,12 +16,12 @@
 
 🏗️ Fase 3: Estrutura de Layout
 - <Navbar /> (Menu e Logo) ✅
-- <Hero /> (Título principal e CTA) ✔️
+- <Hero /> (Título principal e CTA) ✅
 - <Stats /> (Faixa de números/estatísticas) ✅
 - <Services /> (Grid de 3 cards principais) ✅
-- <Steps /> (Seção "Pronto em 3 passos")
-- <Differential />
+- <Steps /> (Seção "Pronto em 3 passos") ✅
 - <Testimonials /> (Seção de depoimentos)
+- <Differential />
 - <FAQ /> (Acordions de perguntas frequentes)
 - <CTA /> 
 - <Footer /> (Rodapé escuro e contatos)

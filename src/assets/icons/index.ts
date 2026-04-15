@@ -1,3 +1,4 @@
+export { default as ArrowDown } from "./ArrowDown.svg?react";
 export { default as ArrowUpRight } from "./ArrowUpRight.svg?react";
 export { default as BuildingOffice } from "./BuildingOffice.svg?react";
 export { default as CaretDown } from "./CaretDown.svg?react";

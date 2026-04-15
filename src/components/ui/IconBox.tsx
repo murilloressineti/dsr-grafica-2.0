@@ -4,9 +4,10 @@ import Icon from "./Icon";
 
 interface IconBoxProps extends React.ComponentProps<"div"> {
   icon: React.ElementType;
+  iconClassName?: string;
 }
 
-export default function IconBox({ icon, className, ...props }: IconBoxProps) {
+export default function IconBox({ icon, className, iconClassName, ...props }: IconBoxProps) {
   return (
     <div
       className={cn(
@@ -23,7 +24,7 @@ export default function IconBox({ icon, className, ...props }: IconBoxProps) {
       <span className="absolute bottom-1 left-1 w-1 h-1 rounded-full bg-neutral-400" />
       <span className="absolute bottom-1 right-1 w-1 h-1 rounded-full bg-neutral-400" />
 
-      <Icon svg={icon} className="fill-brand-secondary" />
+      <Icon svg={icon} className={cn("fill-brand-secondary", iconClassName)} />
     </div>
   );
 }

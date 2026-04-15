@@ -1,6 +1,6 @@
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
-import { ServiceCard } from "../features/";
+import { HowItWorks, ServiceCard } from "../features/";
 import {
   ArrowUpRight,
   GraduationCap,
@@ -96,6 +96,8 @@ export default function ServicesSection() {
           </Button>
         </div>
       </div>
+
+      <HowItWorks />
     </Section>
   );
 }
