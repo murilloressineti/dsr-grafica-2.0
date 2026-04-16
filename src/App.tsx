@@ -4,6 +4,9 @@ import {
   ServicesSection,
   StatsSection,
   TestimonialsSection,
+  DifferentialSection,
+  FAQSection,
+  CTASection,
 } from "@components/sections";
 
 export default function App() {
@@ -21,8 +24,17 @@ export default function App() {
       {/* Services */}
       <ServicesSection />
 
-      {/* TestimonialCard */}
+      {/* Testimonial */}
       <TestimonialsSection />
+
+      {/* Differential */}
+      <DifferentialSection />
+
+      {/* FAQ */}
+      <FAQSection />
+
+      {/* CTA */}
+      <CTASection />
     </div>
   );
 }

@@ -21,13 +21,14 @@
 - <Services /> (Grid de 3 cards principais) ✅
 - <Steps /> (Seção "Pronto em 3 passos") ✅
 - <Testimonials /> (Seção de depoimentos) ✅
-- <Differential />
+- <Differential /> ✅
 - <FAQ /> (Acordions de perguntas frequentes)
-- <CTA /> 
+- <CTA /> ✅
 - <Footer /> (Rodapé escuro e contatos)
 
 📱 Fase 4: Refinamento e Interatividade
 - Animações
+- Botões do nav funcionando
 - Link direto para WhatsApp no botão CTA
 - Revisar Responsividade (Desktop vs Mobile)
 

@@ -18,4 +18,5 @@ export { default as Phone } from "./Phone.svg?react";
 export { default as Star } from "./Star.svg?react";
 export { default as StarHalf } from "./StarHalf.svg?react";
 export { default as StarService } from "./StarService.svg?react";
+export { default as Quotes } from "./Quotes.svg?react";
 export { default as WhatsappLogo } from "./WhatsappLogo.svg?react";
