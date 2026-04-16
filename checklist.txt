@@ -30,7 +30,7 @@
 - Animações
 - Botões do nav funcionando
 - Link direto para WhatsApp no botão CTA
-- Revisar Responsividade (Desktop vs Mobile)
+- Revisar Responsividade (Desktop vs Mobile) - Colocar borda para testar
 
 🚀 Fase 5: Deploy e Entrega
 - Configurar Meta Tags (Título e Descrição SEO)
