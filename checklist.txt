@@ -20,7 +20,7 @@
 - <Stats /> (Faixa de números/estatísticas) ✅
 - <Services /> (Grid de 3 cards principais) ✅
 - <Steps /> (Seção "Pronto em 3 passos") ✅
-- <Testimonials /> (Seção de depoimentos) ✔️
+- <Testimonials /> (Seção de depoimentos) ✅
 - <Differential />
 - <FAQ /> (Acordions de perguntas frequentes)
 - <CTA /> 
