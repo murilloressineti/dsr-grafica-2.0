@@ -53,7 +53,7 @@ const servicesData = [
 
 export default function ServicesSection() {
   return (
-    <Section id="services" className="p-6 md:p-8 lg:p-10">
+    <Section id="serviços" className="p-6 md:p-8 lg:p-10">
       <div className="px-6 py-10 md:p-16 bg-bg-white rounded-4xl shadow-sm">
         {/* Header da Section */}
         <div className="flex flex-col gap-4 items-center text-center">

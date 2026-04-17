@@ -17,10 +17,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { label: "Serviços", href: "/services" },
-    { label: "Como funciona", href: "/como-funciona" },
-    { label: "Sobre", href: "/sobre" },
-    { label: "Contato", href: "/contato" },
+    { label: "Serviços", href: "#serviços" },
+    { label: "Como funciona", href: "#como-funciona" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Contato", href: "#contato" },
   ];
 
   return (
@@ -45,6 +45,7 @@ export default function Header() {
               <li key={link.href}>
                 <Text
                   as="a"
+                  href={link.href}
                   variant={"body-md"}
                   className="hover:text-brand-primary transition-all duration-300 cursor-pointer"
                 >

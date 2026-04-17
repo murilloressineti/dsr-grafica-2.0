@@ -31,7 +31,7 @@
   --color-bg-light: var(--color-neutral-100);
   --color-bg-default: var(--color-neutral-200);
   --color-bg-subtle: var(--color-neutral-300);
-  --color-bg-inverse: var(--color-neutral-900);
+  --color-bg-inverse: #101828;
 
   /* Border Colors */
   --color-border-default: var(--color-neutral-300);
@@ -51,5 +51,13 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 100px;
   }
 }

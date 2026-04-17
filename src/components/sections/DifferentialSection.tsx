@@ -5,7 +5,7 @@ import FounderImg from "@/assets/images/Founder.webp";
 
 export default function DifferentialSection() {
   return (
-    <Section id="diferencial" className="md:px-10 lg:py-10">
+    <Section id="sobre" className="md:px-10 lg:py-10">
       <div className="bg-neutral-white rounded-2xl md:rounded-3xl p-5 md:p-25 shadow-sm mx-auto">
         {/* Grid Principal: 1 coluna no mobile, 2 no desktop */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-center justify-center">

@@ -40,7 +40,7 @@ function StepItem({ icon, title, description, isLast }: StepProps) {
 
 export default function HowItWorks() {
   return (
-    <Section id="how-it-works" className="py-0 md:py-0 lg:py-0 px-0">
+    <Section id="como-funciona" className="py-0 md:py-0 lg:py-0 px-0">
       <div className="relative w-full bg-bg-default px-0 md:px-20 py-12 md:py-30 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-40 items-start">
         {/* CAMADA 1: Imagem de Linhas de Fundo */}
         <div className="absolute z-0 inset-0 pointer-events-none opacity-50">

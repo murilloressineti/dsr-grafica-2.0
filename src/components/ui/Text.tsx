@@ -46,30 +46,23 @@ export const textVariants = cva("font-sans antialiased", {
   },
 });
 
-interface TextProps
-  extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
-  as?:
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "p"
-    | "span"
-    | "label"
-    | "div"
-    | "a";
-} // O tipo as é uma string que representa a tag HTML a ser renderizada. Ele é opcional e tem um valor padrão de "p". Ele pode ser qualquer tag HTML válida, como h1, h2, p, span, etc.
+type TextProps<T extends React.ElementType> = {
+  as?: T;
+  className?: string;
+  variant?: VariantProps<typeof textVariants>["variant"];
+  TextColor?: VariantProps<typeof textVariants>["TextColor"];
+  children?: React.ReactNode;
+} & React.ComponentPropsWithoutRef<T>;
 
-export default function Text({
-  as: Component = "p",
+export default function Text<T extends React.ElementType = "p">({
+  as,
   variant,
   TextColor,
   className,
   children,
   ...props
-}: TextProps) {
+}: TextProps<T>) {
+  const Component = as || "p";
   return (
     <Component
       className={cn(
@@ -78,7 +71,7 @@ export default function Text({
           TextColor,
         }),
         className,
-      )} // Fallback para usar o nome do componente como variante, caso a variante não seja especificada. as any é necessário para evitar erros de tipo, já que Component é do tipo string e não pode ser diretamente usado como chave de variante.
+      )}
       {...props}
     >
       {children}
