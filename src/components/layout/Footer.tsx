@@ -14,7 +14,7 @@ export default function Footer() {
             <img
               src={LogoFull}
               alt="DSR Gráfica"
-              className="w-45 md:w-140 h-full"
+              className="w-45 md:w-180 h-full"
             />
           </div>
 

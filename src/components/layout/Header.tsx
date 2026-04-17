@@ -28,8 +28,8 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out",
         isScrolled
-          ? "bg-transparent backdrop-blur-md border-b border-neutral-200 shadow-sm h-20"
-          : "bg-neutral-white border-b border-transparent h-20",
+          ? "bg-transparent backdrop-blur-md  shadow-sm h-20"
+          : "bg-neutral-white  h-20",
       )}
     >
       <div className="max-w-360 px-6 md:px-30 mx-auto h-full flex items-center justify-between">
@@ -65,6 +65,7 @@ export default function Header() {
             rel="noopener noreferrer"
             variant={"tertiary"}
             size={"sm"}
+            className="hover:border-transparent"
           >
             Pedir orçamento{" "}
             <Icon

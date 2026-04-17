@@ -90,7 +90,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <Section id="depoimentos" className="md:py-20 lg:py-30 md:px-30">
+    <Section id="depoimentos" className="md:py-20 lg:py-30 md:px-20 lg:px-30">
       <div className="flex flex-col gap-12">
         {/* Header da Seção: Título + Navegação */}
         <div className="flex items-center justify-between">
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
             <Button
               variant="tertiary"
               size="sm"
-              className="rounded-lg border-neutral-200"
+              className="rounded-lg border-transparent"
               onClick={prevSlide}
             >
               <Icon svg={CaretLeft} className="fill-neutral-900" />
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
             <Button
               variant="secondary"
               size="sm"
-              className="rounded-lg"
+              className="rounded-lg border-transparent"
               onClick={nextSlide}
             >
               <Icon svg={CaretRight} className="fill-neutral-white" />

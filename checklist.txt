@@ -22,7 +22,7 @@
 - <Steps /> (Seção "Pronto em 3 passos") ✅
 - <Testimonials /> (Seção de depoimentos) ✅
 - <Differential /> ✅
-- <FAQ /> (Acordions de perguntas frequentes)
+- <FAQ /> (Acordions de perguntas frequentes) ✅
 - <CTA /> ✅
 - <Footer /> (Rodapé escuro e contatos) ✅
 
@@ -30,7 +30,7 @@
 - Animações
 - Botões do nav funcionando ✅
 - Link direto para WhatsApp no botão CTA ✅
-- Revisar Responsividade (Desktop vs Mobile) - Colocar borda para testar
+- Revisar Responsividade (Desktop vs Mobile)
 
 🚀 Fase 5: Deploy e Entrega
 - Adicionar Favicon da DSR ✅

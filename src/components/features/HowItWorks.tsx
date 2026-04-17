@@ -69,7 +69,7 @@ export default function HowItWorks() {
             <img
               src={IsoPhone}
               alt="Ilustração de um celular"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain bg-bg-default"
             />
           </div>
         </div>

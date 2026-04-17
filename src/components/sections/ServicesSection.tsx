@@ -72,7 +72,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Grid de Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 py-8 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-8 py-8 lg:py-16">
           {servicesData.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

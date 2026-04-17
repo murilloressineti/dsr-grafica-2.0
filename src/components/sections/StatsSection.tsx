@@ -10,8 +10,8 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <Section id="estatísticas" className="py-12 md:py-24 lg:py-30 md:px-30">
-      <div className="max-w-300 mx-auto flex flex-col gap-6 md:flex-row items-center justify-between">
+    <Section id="estatísticas" className="py-12 md:py-24 lg:py-30 lg:px-30">
+      <div className="max-w-300 mx-auto flex flex-col gap-6 lg:flex-row items-center justify-between">
         {stats.map((stat, index) => (
           <div
             key={index}
