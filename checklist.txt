@@ -28,13 +28,12 @@
 
 📱 Fase 4: Refinamento e Interatividade
 - Animações
-- Botões do nav funcionando
-- Link direto para WhatsApp no botão CTA
+- Botões do nav funcionando ✅
+- Link direto para WhatsApp no botão CTA ✅
 - Revisar Responsividade (Desktop vs Mobile) - Colocar borda para testar
 
 🚀 Fase 5: Deploy e Entrega
-- Configurar Meta Tags (Título e Descrição SEO)
-- Adicionar Favicon da DSR
+- Adicionar Favicon da DSR ✅
 - Rodar 'pnpm build' (Check de erros)
 - Deploy na Vercel/Netlify
 - Apontar Domínio Final

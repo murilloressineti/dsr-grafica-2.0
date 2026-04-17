@@ -60,9 +60,9 @@ export default function Header() {
         <div className="hidden md:block">
           <Button
             as="a"
-            href="#" // Link
+            href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             variant={"tertiary"}
             size={"sm"}
           >
@@ -122,6 +122,7 @@ export default function Header() {
               <Text
                 key={link.label}
                 as="a"
+                href={link.href}
                 variant={"body-lg"}
                 className="hover:text-brand-primary transition-all duration-300 cursor-pointer"
                 onClick={() => setIsOpen(false)}
@@ -134,9 +135,9 @@ export default function Header() {
           <div className="w-full mt-10">
             <Button
               as="a"
-              href="#" // Link
+              href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               variant={"primary"}
               size={"sm"}
               className="w-full"

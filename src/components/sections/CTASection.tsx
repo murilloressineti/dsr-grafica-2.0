@@ -24,7 +24,13 @@ export default function CTASection() {
         </div>
 
         {/* Botão de WhatsApp */}
-        <Button as="a" href="#" target="_blank" className="mt-8 md:mt-16">
+        <Button
+          as="a"
+          href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 md:mt-16"
+        >
           Mandar mensagem no whatsapp
           <Icon
             svg={ArrowUpRight}

@@ -43,7 +43,9 @@ export default function HeroSection() {
         <div className="flex flex-col items-center gap-4">
           <Button
             as="a"
-            href="#"
+            href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
             size="default"
             className="shadow-lg shadow-blue-200"
           >

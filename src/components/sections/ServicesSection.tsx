@@ -82,9 +82,9 @@ export default function ServicesSection() {
         <div className="text-center">
           <Button
             as="a"
-            href="#" // Link
+            href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Solicitar orçamento rápido
             <Icon

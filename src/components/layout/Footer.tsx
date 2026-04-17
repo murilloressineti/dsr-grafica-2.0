@@ -60,6 +60,7 @@ export default function Footer() {
                   as="a"
                   href="https://www.google.com/maps/place/DSR+Gr%C3%A1fica/@-23.4663088,-46.5232101,845m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94cef5af59cb927d:0x8311cb81fd99d1e1!8m2!3d-23.4663088!4d-46.5206352!16s%2Fg%2F11h24f6wvz?entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-brand-primary transition-colors"
                 >
                   Rua do Rosário, 151 · Vila Camargos · Guarulhos-SP
@@ -69,6 +70,7 @@ export default function Footer() {
                   as="a"
                   href="https://www.google.com/maps/place/DSR+Gr%C3%A1fica/@-23.4663088,-46.5232101,845m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94cef5af59cb927d:0x8311cb81fd99d1e1!8m2!3d-23.4663088!4d-46.5206352!16s%2Fg%2F11h24f6wvz?entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-brand-primary transition-colors"
                 >
                   Seg-sex, 9h30-18h00
