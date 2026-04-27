@@ -28,11 +28,11 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out",
         isScrolled
-          ? "bg-transparent backdrop-blur-md  shadow-sm h-20"
+          ? "bg-transparent backdrop-blur-md shadow-sm h-20"
           : "bg-neutral-white  h-20",
       )}
     >
-      <div className="max-w-360 px-6 md:px-30 mx-auto h-full flex items-center justify-between">
+      <div className="max-w-360 px-6 lg:px-30 mx-auto h-full flex items-center justify-between">
         {/* Logo */}
         <div className="cursor-pointer shrink-0">
           <Logo />
@@ -40,7 +40,7 @@ export default function Header() {
 
         {/* Menu Nav */}
         <nav className="hidden md:block">
-          <ul className="flex items-center gap-8">
+          <ul className="flex items-center gap-4 lg:gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Text
