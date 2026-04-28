@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeInUp, viewportSettings } from "@/lib/motion";
-import { cn } from "@/lib/utils";
 import { Text } from "../ui";
 import { LogoFull } from "@/assets/logo";
 
