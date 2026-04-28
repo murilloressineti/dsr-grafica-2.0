@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
 import { HowItWorks, ServiceCard } from "../features/";
@@ -57,29 +59,71 @@ export default function ServicesSection() {
       <div className="px-6 py-10 md:p-16 bg-bg-white rounded-4xl shadow-sm">
         {/* Header da Section */}
         <div className="flex flex-col gap-4 items-center text-center">
-          <Text
-            variant="cta-md"
-            TextColor="brand"
-            className="leading-snug tracking-widest"
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={0}
           >
-            Serviços
-          </Text>
-          <Text variant="h1">O que você precisa, a gente faz</Text>
-          <Text variant="body-lg" TextColor="secondary">
-            Escolha pelo seu perfil, não precisa saber o nome técnico do
-            serviço.
-          </Text>
+            <Text
+              variant="cta-md"
+              TextColor="brand"
+              className="leading-snug tracking-widest"
+            >
+              Serviços
+            </Text>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={1}
+          >
+            <Text variant="h1">O que você precisa, a gente faz</Text>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={2}
+          >
+            <Text variant="body-lg" TextColor="secondary">
+              Escolha pelo seu perfil, não precisa saber o nome técnico do
+              serviço.
+            </Text>
+          </motion.div>
         </div>
 
         {/* Grid de Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-8 py-8 lg:py-16">
           {servicesData.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={index + 3}
+            >
+              <ServiceCard {...service} />
+            </motion.div>
           ))}
         </div>
 
         {/* Button */}
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          custom={6}
+        >
           <Button
             as="a"
             href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
@@ -94,7 +138,7 @@ export default function ServicesSection() {
               className="fill-text-primary"
             />
           </Button>
-        </div>
+        </motion.div>
       </div>
 
       <HowItWorks />

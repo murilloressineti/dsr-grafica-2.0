@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { fadeInDown } from "@/lib/motion";
 import { Button, Icon, Text } from "../ui";
 import { Logo } from "@/assets/logo";
 import { CaretRight, Close, HamburgerMenu } from "@assets/icons";
@@ -34,15 +36,27 @@ export default function Header() {
     >
       <div className="max-w-360 px-6 lg:px-30 mx-auto h-full flex items-center justify-between">
         {/* Logo */}
-        <div className="cursor-pointer shrink-0">
+        <motion.div
+          className="cursor-pointer shrink-0"
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+        >
           <Logo />
-        </div>
+        </motion.div>
 
         {/* Menu Nav */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-4 lg:gap-8">
-            {navLinks.map((link) => (
-              <li key={link.href}>
+            {navLinks.map((link, index) => (
+              <motion.li
+                key={link.href}
+                variants={fadeInDown}
+                initial="hidden"
+                animate="visible"
+                custom={index + 1}
+              >
                 <Text
                   as="a"
                   href={link.href}
@@ -51,13 +65,19 @@ export default function Header() {
                 >
                   {link.label}
                 </Text>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </nav>
 
         {/* Button */}
-        <div className="hidden md:block">
+        <motion.div
+          className="hidden md:block"
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={2}
+        >
           <Button
             as="a"
             href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
@@ -74,13 +94,17 @@ export default function Header() {
               className="fill-text-primary w-5 h-5"
             />
           </Button>
-        </div>
+        </motion.div>
 
         {/* HamburgerMenu */}
-        <button
+        <motion.button
           className="md:hidden w-10 h-10 flex items-center justify-center overflow-hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={1}
         >
           {/* Ícone de Menu (Hamburguer) */}
           <div
@@ -105,7 +129,7 @@ export default function Header() {
           >
             <Icon svg={Close} size={"lg"} />
           </div>
-        </button>
+        </motion.button>
       </div>
 
       {/* Menu Mobile Overlay */}

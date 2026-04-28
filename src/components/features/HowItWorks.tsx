@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Icon, IconBox, Text } from "../ui";
 import { ArrowDown, Coins, Package, WhatsappLogo } from "@/assets/icons";
@@ -9,11 +11,19 @@ interface StepProps {
   title: string;
   description: string;
   isLast?: boolean;
+  index: number;
 }
 
-function StepItem({ icon, title, description, isLast }: StepProps) {
+function StepItem({ icon, title, description, isLast, index }: StepProps) {
   return (
-    <div className="bg-bg-default md:p-2 md:max-w-105 flex flex-col md:items-start">
+    <motion.div
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportSettings}
+      custom={index}
+      className="bg-bg-default md:p-2 md:max-w-105 flex flex-col md:items-start"
+    >
       <div className="flex flex-col items-start">
         {/* Ícone com o Box */}
         <IconBox icon={icon} className="mb-4" iconClassName="fill-none" />
@@ -34,22 +44,51 @@ function StepItem({ icon, title, description, isLast }: StepProps) {
           <Icon svg={ArrowDown} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
 export default function HowItWorks() {
+  const steps = [
+    {
+      icon: WhatsappLogo,
+      title: "Manda o arquivo",
+      description: "Pelo WhatsApp, e-mail ou pen drive, como preferir",
+    },
+    {
+      icon: Coins,
+      title: "Recebe prazo e preço",
+      description: "A gente confirma na hora o que é possível fazer ainda hoje",
+    },
+    {
+      icon: Package,
+      title: "Retira ou combina entrega",
+      description: "Na loja em Guarulhos ou combinamos a entrega",
+      isLast: true,
+    },
+  ];
   return (
     <Section id="como-funciona" className="py-0 md:py-0 lg:py-0 px-0">
       <div className="relative w-full bg-bg-default px-0 md:px-20 py-12 md:py-30 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-40 items-start">
         {/* CAMADA 1: Imagem de Linhas de Fundo */}
-        <div className="absolute z-0 inset-0 pointer-events-none opacity-50">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.5 }}
+          className="absolute z-0 inset-0 pointer-events-none opacity-50"
+        >
           <img src={BGLines} alt="" className="w-full h-full object-cover" />
-        </div>
+        </motion.div>
 
         {/* Lado Esquerdo: Textos Fixos */}
         <div className="relative h-full flex flex-col justify-star z-10 mb-8">
-          <div className="flex flex-col gap-4">
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={0}
+            className="flex flex-col gap-4"
+          >
             <Text
               variant="cta-md"
               TextColor="brand"
@@ -63,35 +102,29 @@ export default function HowItWorks() {
             <Text variant="body-lg" TextColor="secondary">
               Sem cadastro, sem fila. Do arquivo ao produto acabado.
             </Text>
-          </div>
+          </motion.div>
 
-          <div className="absolute top-20 -left-20 w-190 pointer-events-none opacity-0 lg:opacity-100 translate-y-20">
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={1}
+            className="hidden lg:block absolute top-20 -left-20 w-190 pointer-events-none translate-y-20"
+          >
             <img
               src={IsoPhone}
               alt="Ilustração de um celular"
               className="w-full h-full object-contain bg-bg-default"
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* Lado Direito: Os Passos dentro do Box Cinza sutil */}
         <div className="flex flex-col z-10">
-          <StepItem
-            icon={WhatsappLogo}
-            title="Manda o arquivo"
-            description="Pelo WhatsApp, e-mail ou pen drive, como preferir"
-          />
-          <StepItem
-            icon={Coins}
-            title="Recebe prazo e preço"
-            description="A gente confirma na hora o que é possível fazer ainda hoje"
-          />
-          <StepItem
-            icon={Package}
-            title="Retira ou combina entrega"
-            description="Na loja em Guarulhos ou combinamos a entrega"
-            isLast
-          />
+          {steps.map((step, index) => (
+            <StepItem key={index} index={index + 2} {...step} />
+          ))}
         </div>
       </div>
     </Section>

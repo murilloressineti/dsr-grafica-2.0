@@ -27,10 +27,10 @@
 - <Footer /> (Rodapé escuro e contatos) ✅
 
 📱 Fase 4: Refinamento e Interatividade
-- Animações
+- Animações ✅
 - Botões do nav funcionando ✅
 - Link direto para WhatsApp no botão CTA ✅
-- Revisar Responsividade (Desktop vs Mobile)
+- Revisar Responsividade (Desktop vs Mobile) ✅
 
 🚀 Fase 5: Deploy e Entrega
 - Adicionar Favicon da DSR ✅

@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeInUp, viewportSettings } from "@/lib/motion";
+import { cn } from "@/lib/utils";
 import { Text } from "../ui";
 import { LogoFull } from "@/assets/logo";
 
@@ -10,18 +13,32 @@ export default function Footer() {
         {/* Grid Principal */}
         <div className="flex flex-col gap-8 md:gap-30 md:flex-row mb-8">
           {/* Logo e Branding */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={0}
+            className="flex flex-col gap-6"
+          >
             <img
               src={LogoFull}
               alt="DSR Gráfica"
               className="w-45 md:w-180 h-full"
             />
-          </div>
+          </motion.div>
 
           {/* Grid Colunas */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Coluna: Serviços */}
-            <div className="flex flex-col gap-3 md:gap-4">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={1}
+              className="flex flex-col gap-3 md:gap-4"
+            >
               <Text variant="body-md" className="font-bold text-neutral-white">
                 Serviços
               </Text>
@@ -46,10 +63,17 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
 
             {/* Coluna: Endereço */}
-            <div className="flex flex-col gap-3 md:gap-4">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={2}
+              className="flex flex-col gap-3 md:gap-4"
+            >
               <Text variant="body-md" className="font-bold text-neutral-white">
                 Endereço
               </Text>
@@ -76,10 +100,17 @@ export default function Footer() {
                   Seg-sex, 9h30-18h00
                 </Text>
               </div>
-            </div>
+            </motion.div>
 
             {/* Coluna: Contato */}
-            <div className="flex flex-col gap-3 md:gap-4">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={3}
+              className="flex flex-col gap-3 md:gap-4"
+            >
               <Text variant="body-md" className="font-bold text-neutral-white">
                 Contato
               </Text>
@@ -101,19 +132,32 @@ export default function Footer() {
                   dsrgrafica@gmail.com
                 </Text>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Linha Divisória */}
-        <div className="w-full h-px bg-neutral-700 mb-5" />
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 1, scaleX: 1 }}
+          viewport={viewportSettings}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="w-full h-px bg-neutral-700 mb-5"
+        />
 
         {/* Copyright */}
-        <div className="text-center">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          custom={4}
+          className="text-center"
+        >
           <Text variant="body-sm" className="text-neutral-400">
             © {currentYear} DSR Gráfica · Todos os direitos reservados
           </Text>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

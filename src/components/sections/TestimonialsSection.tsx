@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { fadeInDown, fadeInUp, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
 import { CaretLeft, CaretRight } from "@/assets/icons";
@@ -93,7 +94,14 @@ export default function TestimonialsSection() {
     <Section id="depoimentos" className="md:py-20 lg:py-30 md:px-20 lg:px-30">
       <div className="flex flex-col gap-12">
         {/* Header da Seção: Título + Navegação */}
-        <div className="flex items-center justify-between">
+        <motion.div
+          className="flex items-center justify-between"
+          variants={fadeInDown}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          custom={0}
+        >
           <Text as="h2" variant="h1">
             O que nossos clientes dizem
           </Text>
@@ -118,10 +126,17 @@ export default function TestimonialsSection() {
               <Icon svg={CaretRight} className="fill-neutral-white" />
             </Button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Grid de Depoimentos */}
-        <div className="overflow-hidden">
+        <motion.div
+          className="overflow-hidden"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          custom={1}
+        >
           <motion.div
             className="flex"
             animate={{
@@ -140,17 +155,32 @@ export default function TestimonialsSection() {
                     pageIndex * itemsPerPage + itemsPerPage,
                   )
                   .map((item, index) => (
-                    <div key={index} className="flex items-stretch">
+                    <motion.div
+                      key={index}
+                      className="flex-1 flex items-stretch"
+                      variants={fadeInUp}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={viewportSettings}
+                      custom={index + 1}
+                    >
                       <TestimonialCard {...item} />
-                    </div>
+                    </motion.div>
                   ))}
               </div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Indicadores (Bullets) */}
-        <div className="flex justify-center gap-2">
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+          custom={2}
+          className="flex justify-center gap-2"
+        >
           {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}
@@ -163,7 +193,7 @@ export default function TestimonialsSection() {
               )}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

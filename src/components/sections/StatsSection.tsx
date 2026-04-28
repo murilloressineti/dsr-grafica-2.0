@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Text } from "../ui";
 
@@ -13,8 +15,13 @@ export default function StatsSection() {
     <Section id="estatísticas" className="py-12 md:py-24 lg:py-30 lg:px-30">
       <div className="max-w-300 mx-auto flex flex-col gap-6 lg:flex-row items-center justify-between">
         {stats.map((stat, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={fadeInDown}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={index}
             className="flex flex-col gap-4 md:gap-3 items-center text-center group"
           >
             <Text
@@ -26,7 +33,7 @@ export default function StatsSection() {
             <Text variant={"body-lg"} TextColor={"secondary"}>
               {stat.label}
             </Text>
-          </div>
+          </motion.div>
         ))}
       </div>
     </Section>

@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInDown } from "@/lib/motion";
+
 import { Section } from "../layout";
 import { Badge, Button, Icon, Text } from "../ui";
 import { ArrowUpRight } from "@/assets/icons";
@@ -19,28 +22,54 @@ export default function HeroSection() {
 
       <div className="relative z-10 mx-auto px-6 md:px-30 flex flex-col items-center text-center">
         {/* Badges Superiores */}
-        <div className="flex gap-3 mb-5">
+        <motion.div
+          className="flex gap-3 mb-5"
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+        >
           <Badge variant="default">Guarulhos</Badge>
           <Badge variant="outline">Desde 1982</Badge>
-        </div>
+        </motion.div>
 
         {/* Título Principal */}
-        <Text as="h1" variant="display-xl" className="max-w-3xl mb-5">
-          Seu material impresso em horas, não em dias.
-        </Text>
+        <motion.div
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={1}
+        >
+          <Text as="h1" variant="display-xl" className="max-w-3xl mb-5">
+            Seu material impresso em horas, não em dias.
+          </Text>
+        </motion.div>
 
         {/* Subtítulo / Descrição */}
-        <Text
-          variant="body-lg"
-          TextColor="secondary"
-          className="max-w-4xl mb-14 md:mb-16"
+        <motion.div
+          variants={fadeInDown}
+          initial="hidden"
+          animate="visible"
+          custom={2}
         >
-          TCC, banner, panfletos, contrato, entregamos no mesmo dia. 43 anos de
-          experiência com atendimento humano de verdade.
-        </Text>
+          <Text
+            variant="body-lg"
+            TextColor="secondary"
+            className="max-w-4xl mb-14 md:mb-16"
+          >
+            TCC, banner, panfletos, contrato, entregamos no mesmo dia. 43 anos
+            de experiência com atendimento humano de verdade.
+          </Text>
+        </motion.div>
 
         {/* CTA Principal */}
-        <div className="flex flex-col items-center gap-4">
+        <motion.div
+          className="flex flex-col items-center gap-4"
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          custom={3}
+        >
           <Button
             as="a"
             href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
@@ -69,7 +98,7 @@ export default function HeroSection() {
               Respondemos em minutos · Seg-sex, 9h30-18h00
             </Text>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

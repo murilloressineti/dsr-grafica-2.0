@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeInDown, fadeInUp, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Text, Icon } from "../ui";
 import { Quotes } from "@/assets/icons";
@@ -10,25 +12,45 @@ export default function DifferentialSection() {
         {/* Grid Principal: 1 coluna no mobile, 2 no desktop */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 items-center justify-center">
           {/* LADO ESQUERDO: Imagem */}
-          <div className="flex justify-center lg:justify-start items-center">
-            <div className="relative w-full lg:max-w-100 overflow-hidden rounded-lg">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+            custom={1}
+            className="flex justify-center lg:justify-start items-center"
+          >
+            <div className="relative w-68 h-100 overflow-hidden rounded-lg">
               <img
                 src={FounderImg}
                 alt="Fundador da DSR Gráfica trabalhando"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* LADO DIREITO: Bloco de Texto Completo */}
           <div className="flex flex-col gap-4 lg:gap-6 lg:max-w-200">
             {/* Ícone de Aspas  */}
-            <div className="shrink-0">
+            <motion.div
+              variants={fadeInDown}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={0}
+              className="shrink-0"
+            >
               <Icon svg={Quotes} size={"lg"} />
-            </div>
+            </motion.div>
 
             {/* Depoimento e Descrição */}
-            <div>
+            <motion.div
+              variants={fadeInDown}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={1}
+            >
               <Text as="h3" variant="h3" className="text-neutral-700">
                 Comecei no ramo em 1982 e abri minha própria gráfica em 1992.
                 Enquanto muita gráfica hoje é só 'apertar um botão', aqui a
@@ -37,17 +59,24 @@ export default function DifferentialSection() {
                 perfeito — com o cuidado que só quem tem 40 anos de profissão
                 consegue ter.
               </Text>
-            </div>
+            </motion.div>
 
             {/* Assinatura */}
-            <div className="flex flex-col gap-1.5 pt-4 lg:pt-6">
+            <motion.div
+              variants={fadeInDown}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportSettings}
+              custom={2}
+              className="flex flex-col gap-1.5 pt-4 lg:pt-6"
+            >
               <Text variant="cta-md" className="font-bold text-brand-secondary">
                 Fundador da DSR Gráfica
               </Text>
               <Text variant="body-md" className="text-neutral-800 font-medium">
                 Guarulhos desde 1992
               </Text>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
