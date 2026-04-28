@@ -37,3 +37,4 @@
 - Rodar 'pnpm build' (Check de erros) ✅
 - Deploy na Vercel/Netlify ✅
 - Apontar Domínio Final ✅
+- README

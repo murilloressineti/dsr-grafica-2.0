@@ -78,7 +78,15 @@ export default function HeroSection() {
             size="default"
             className="shadow-lg shadow-blue-200"
           >
-            Pedir orçamento em minutos
+            {/* Texto para Mobile*/}
+            <Text variant={"cta-lg"} className="md:hidden">
+              Pedir orçamento
+            </Text>
+
+            {/* Texto para Desktop */}
+            <Text variant={"cta-lg"} className="hidden md:inline">
+              Pedir orçamento rápido
+            </Text>
             <Icon
               svg={ArrowUpRight}
               animate={"rotate"}
@@ -94,7 +102,10 @@ export default function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B415] "></span>
             </span>
 
-            <Text variant="body-md" className="text-neutral-600">
+            <Text
+              variant="body-md"
+              className="text-neutral-600 whitespace-nowrap text-sm md:text-base"
+            >
               Respondemos em minutos · Seg-sex, 9h30-18h00
             </Text>
           </div>

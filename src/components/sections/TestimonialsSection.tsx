@@ -30,25 +30,25 @@ const testimonials = [
     role: "Arquiteta",
   },
   {
+    rating: 5,
+    testimonial:
+      "Enviei a arte pelo WhatsApp e em poucas horas já estava tudo pronto. Agilidade absurda, me salvou em um prazo apertado.",
+    name: "Carlos Andrade",
+    role: "Designer gráfico",
+  },
+  {
     rating: 4.5,
     testimonial:
-      "Precisei encadernar meu TCC de última hora e entregaram no mesmo dia. Salvaram minha apresentação!",
-    name: "Ana Lima",
-    role: "Estudante universitária",
+      "Imprimi materiais para um evento e fiquei impressionada com a qualidade do acabamento. Tudo muito profissional.",
+    name: "Fernanda Souza",
+    role: "Produtora de eventos",
   },
   {
     rating: 5,
     testimonial:
-      "Excelente atendimento! Fizemos os cartões de visita e panfletos da loja. Qualidade impecável das cores.",
-    name: "Ricardo Silva",
-    role: "Proprietário de Comércio",
-  },
-  {
-    rating: 4.5,
-    testimonial:
-      "Trabalho com eles há anos para as plotagens de projetos. Rapidez e precisão que não encontro em outro lugar.",
-    name: "Juliana Mendes",
-    role: "Arquiteta",
+      "Fiz adesivos personalizados para minha marca e ficaram perfeitos. Cores vivas e ótima durabilidade.",
+    name: "Lucas Ribeiro",
+    role: "Empreendedor",
   },
 ];
 
@@ -138,7 +138,17 @@ export default function TestimonialsSection() {
           custom={1}
         >
           <motion.div
-            className="flex"
+            className="flex cursor-grab active:cursor-grabbing" // Feedback visual de arrastar
+            drag="x" // Habilita o arraste no eixo X
+            dragConstraints={{ left: 0, right: 0 }} // Mantém o elemento "preso" ao centro após soltar
+            onDragEnd={(_, info) => {
+              const threshold = 50; // Sensibilidade: quantos pixels o usuário precisa mover
+              if (info.offset.x < -threshold && currentPage < totalPages - 1) {
+                nextSlide();
+              } else if (info.offset.x > threshold && currentPage > 0) {
+                prevSlide();
+              }
+            }}
             animate={{
               x: `-${currentPage * 100}%`,
             }}

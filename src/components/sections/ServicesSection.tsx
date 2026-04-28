@@ -130,7 +130,15 @@ export default function ServicesSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Solicitar orçamento rápido
+            {/* Texto para Mobile*/}
+            <Text variant={"cta-lg"} className="md:hidden">
+              Solicitar orçamento
+            </Text>
+
+            {/* Texto para Desktop */}
+            <Text variant={"cta-lg"} className="hidden md:inline">
+              Solicitar orçamento rápido
+            </Text>
             <Icon
               svg={ArrowUpRight}
               animate={"rotate"}
