@@ -122,7 +122,7 @@ export default function ServicesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportSettings}
-          custom={4}
+          custom={6}
         >
           <Button
             as="a"
