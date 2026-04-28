@@ -32,23 +32,23 @@ const testimonials = [
   {
     rating: 5,
     testimonial:
-      "Enviei a arte pelo WhatsApp e em poucas horas já estava tudo pronto. Agilidade absurda, me salvou em um prazo apertado.",
-    name: "Carlos Andrade",
-    role: "Designer gráfico",
+      "Precisava de impressões em alta qualidade para uma apresentação importante e o resultado superou as expectativas. Tudo muito bem acabado.",
+    name: "Lucas Ferreira",
+    role: "Designer Gráfico",
   },
   {
-    rating: 4.5,
+    rating: 4,
     testimonial:
-      "Imprimi materiais para um evento e fiquei impressionada com a qualidade do acabamento. Tudo muito profissional.",
-    name: "Fernanda Souza",
-    role: "Produtora de eventos",
+      "Bom custo-benefício e entrega dentro do prazo. Fiz adesivos personalizados e ficaram exatamente como eu imaginei.",
+    name: "Carla Souza",
+    role: "Empreendedora",
   },
   {
     rating: 5,
     testimonial:
-      "Fiz adesivos personalizados para minha marca e ficaram perfeitos. Cores vivas e ótima durabilidade.",
-    name: "Lucas Ribeiro",
-    role: "Empreendedor",
+      "Atendimento rápido e muito profissional. Sempre que preciso de impressões ou cópias, sei que posso contar com eles.",
+    name: "Marcos Oliveira",
+    role: "Advogado",
   },
 ];
 
@@ -138,17 +138,7 @@ export default function TestimonialsSection() {
           custom={1}
         >
           <motion.div
-            className="flex cursor-grab active:cursor-grabbing" // Feedback visual de arrastar
-            drag="x" // Habilita o arraste no eixo X
-            dragConstraints={{ left: 0, right: 0 }} // Mantém o elemento "preso" ao centro após soltar
-            onDragEnd={(_, info) => {
-              const threshold = 50; // Sensibilidade: quantos pixels o usuário precisa mover
-              if (info.offset.x < -threshold && currentPage < totalPages - 1) {
-                nextSlide();
-              } else if (info.offset.x > threshold && currentPage > 0) {
-                prevSlide();
-              }
-            }}
+            className="flex"
             animate={{
               x: `-${currentPage * 100}%`,
             }}
