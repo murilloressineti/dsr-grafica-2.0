@@ -22,20 +22,27 @@ export default function HeroSection() {
       />
 
       {/* Ilustração decorativa da Hero */}
-      <div
+      <motion.div
         aria-hidden="true"
         className="
           absolute inset-0 z-0
           hidden lg:block
           pointer-events-none
         "
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.4,
+          ease: "easeOut",
+        }}
       >
         <img
           src={HeroIllustration}
           alt=""
           className="absolute inset-0 w-full h-full object-contain object-center"
         />
-      </div>
+      </motion.div>
 
       <div className="relative z-10 mx-auto px-6 md:px-30 flex flex-col items-center text-center">
         {/* Badges Superiores */}
