@@ -118,7 +118,7 @@ export default function TestimonialsSection() {
             </Button>
 
             <Button
-              variant="secondary"
+              variant="primary"
               size="sm"
               className="rounded-lg border-transparent"
               onClick={nextSlide}

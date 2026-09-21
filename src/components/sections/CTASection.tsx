@@ -1,13 +1,24 @@
 import { motion } from "framer-motion";
+
 import { popIn, viewportSettings } from "@/lib/motion";
+
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
-import { ArrowUpRight } from "@/assets/icons";
+import CTADecorations from "../features/CTADecorations";
+
+import { WhatsappLogo } from "@/assets/icons";
 
 export default function CTASection() {
   return (
-    <Section id="contato" className="py-16 md:py-30 lg:py-40 md:px-15 lg:px-30">
-      <div className="flex flex-col items-center text-center max-w-300 mx-auto">
+    <Section
+      id="contato"
+      className="relative py-16 md:py-30 lg:py-40 md:px-15 lg:px-30"
+    >
+      {/* Elementos decorativos */}
+      <CTADecorations />
+
+      {/* Conteúdo principal */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-300 mx-auto">
         <div className="md:py-10">
           {/* Badge Superior */}
           <motion.div
@@ -55,14 +66,17 @@ export default function CTASection() {
             href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-[#19a159] hover:bg-[#0E703B]"
           >
-            Mandar mensagem no whatsapp
             <Icon
-              svg={ArrowUpRight}
-              animate="rotate"
-              className="fill-text-primary"
+              svg={WhatsappLogo}
+              animate="scale"
+              className="fill-text-inverted"
               size="md"
             />
+            <Text variant="cta-lg" className="text-text-inverted">
+              Mandar mensagem no WhatsApp
+            </Text>
           </Button>
         </motion.div>
       </div>

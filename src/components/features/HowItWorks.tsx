@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 import { fadeInUp, fadeInDown, viewportSettings } from "@/lib/motion";
+
 import { Section } from "../layout";
 import { Icon, IconBox, Text } from "../ui";
-import { ArrowDown, Coins, Package, WhatsappLogo } from "@/assets/icons";
+
+import { ArrowDown, Coins, Files, Package } from "@/assets/icons";
 import BGLines from "@/assets/images/BackroundLines.png";
-import IsoPhone from "@/assets/images/IsoPhone.svg";
+import HIWIllustration from "@/assets/images/hiw-illustration.png";
 
 interface StepProps {
   icon: React.ElementType;
@@ -12,9 +16,20 @@ interface StepProps {
   description: string;
   isLast?: boolean;
   index: number;
+  colors: {
+    icon: string;
+    iconBg: string;
+  };
 }
 
-function StepItem({ icon, title, description, isLast, index }: StepProps) {
+function StepItem({
+  icon,
+  title,
+  description,
+  isLast,
+  index,
+  colors,
+}: StepProps) {
   return (
     <motion.div
       variants={fadeInUp}
@@ -25,13 +40,18 @@ function StepItem({ icon, title, description, isLast, index }: StepProps) {
       className="bg-bg-default md:p-2 md:max-w-105 flex flex-col md:items-start"
     >
       <div className="flex flex-col items-start">
-        {/* Ícone com o Box */}
-        <IconBox icon={icon} className="mb-4" iconClassName="fill-none" />
+        {/* Ícone com cores personalizadas */}
+        <IconBox
+          icon={icon}
+          className={cn("mb-4", colors.iconBg)}
+          iconClassName={colors.icon}
+        />
 
         <div className="flex flex-col gap-2 text-left">
           <Text variant="body-lg" className="font-bold text-neutral-900">
             {title}
           </Text>
+
           <Text variant="body-md" TextColor="secondary">
             {description}
           </Text>
@@ -51,19 +71,31 @@ function StepItem({ icon, title, description, isLast, index }: StepProps) {
 export default function HowItWorks() {
   const steps = [
     {
-      icon: WhatsappLogo,
+      icon: Files,
       title: "Manda o arquivo",
       description: "Pelo WhatsApp, e-mail ou pen drive, como preferir",
+      colors: {
+        icon: "fill-brand-magenta",
+        iconBg: "bg-brand-magenta/20",
+      },
     },
     {
       icon: Coins,
       title: "Recebe prazo e preço",
       description: "A gente confirma na hora o que é possível fazer ainda hoje",
+      colors: {
+        icon: "fill-brand-yellow",
+        iconBg: "bg-brand-yellow/20",
+      },
     },
     {
       icon: Package,
       title: "Retira ou combina entrega",
       description: "Na loja em Guarulhos ou combinamos a entrega",
+      colors: {
+        icon: "fill-brand-green",
+        iconBg: "bg-brand-green/20",
+      },
       isLast: true,
     },
   ];
@@ -110,10 +142,10 @@ export default function HowItWorks() {
             whileInView="visible"
             viewport={viewportSettings}
             custom={1}
-            className="hidden lg:block absolute top-20 -left-20 w-190 pointer-events-none translate-y-20"
+            className="hidden lg:block absolute top-20 -left-20 w-180 pointer-events-none translate-y-20"
           >
             <img
-              src={IsoPhone}
+              src={HIWIllustration}
               alt="Ilustração de um celular"
               className="w-full h-full object-contain bg-bg-default"
             />

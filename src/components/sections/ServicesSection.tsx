@@ -3,12 +3,7 @@ import { fadeInUp, fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
 import { HowItWorks, ServiceCard } from "../features/";
-import {
-  ArrowUpRight,
-  GraduationCap,
-  Files,
-  BuildingOffice,
-} from "@/assets/icons";
+import { ArrowUpRight, GraduationCap, Files, Storefront } from "@/assets/icons";
 
 const servicesData = [
   {
@@ -23,9 +18,15 @@ const servicesData = [
       "Cópias P&B e coloridas",
       "Digitalização de documentos",
     ],
+    colors: {
+      icon: "fill-brand-magenta",
+      iconBg: "bg-brand-magenta/20",
+      category: "text-brand-magenta",
+      bullet: "fill-brand-magenta",
+    },
   },
   {
-    icon: Files,
+    icon: Storefront,
     category: "Para Comércios",
     title: "Material de divulgação",
     description:
@@ -36,9 +37,15 @@ const servicesData = [
       "Adesivos personalizados",
       "Cardápios",
     ],
+    colors: {
+      icon: "fill-brand-yellow",
+      iconBg: "bg-brand-yellow/20",
+      category: "text-brand-yellow",
+      bullet: "fill-brand-yellow",
+    },
   },
   {
-    icon: BuildingOffice,
+    icon: Files,
     category: "Para Profissionais",
     title: "Documentos e artes gráficas",
     description:
@@ -46,10 +53,15 @@ const servicesData = [
     items: [
       "Impressão de contratos",
       "Plastificação",
-      "Digitalização",
       "Serviços gráficos",
       "Impressão offset",
     ],
+    colors: {
+      icon: "fill-brand-primary",
+      iconBg: "bg-brand-primary/20",
+      category: "text-brand-primary",
+      bullet: "fill-brand-primary",
+    },
   },
 ];
 

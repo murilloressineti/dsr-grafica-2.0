@@ -95,7 +95,7 @@ export default function FAQSection() {
             <img
               src={FAQIllustration}
               alt="Ilustração FAQ"
-              className="w-full h-auto bg-bg-default"
+              className="w-full h-auto bg-bg-default pointer-events-none"
             />
           </motion.div>
         </div>

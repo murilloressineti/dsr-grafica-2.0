@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { fadeInDown, fadeInUp, viewportSettings } from "@/lib/motion";
+import { fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Text, Icon } from "../ui";
 import { Quotes } from "@/assets/icons";
-import FounderImg from "@/assets/images/Founder.webp";
+//import FounderImg from "@/assets/images/Founder.webp";
 
 export default function DifferentialSection() {
   return (
@@ -11,7 +11,7 @@ export default function DifferentialSection() {
       <div className="bg-neutral-white rounded-2xl lg:rounded-3xl p-5 lg:p-25 shadow-sm mx-auto">
         {/* Grid Principal: 1 coluna no mobile, 2 no desktop */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 items-center justify-center">
-          {/* LADO ESQUERDO: Imagem */}
+          {/* LADO ESQUERDO: Imagem 
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -27,7 +27,7 @@ export default function DifferentialSection() {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-          </motion.div>
+          </motion.div>*/}
 
           {/* LADO DIREITO: Bloco de Texto Completo */}
           <div className="flex flex-col gap-4 lg:gap-6 lg:max-w-200">
@@ -70,11 +70,14 @@ export default function DifferentialSection() {
               custom={2}
               className="flex flex-col gap-1.5 pt-4 lg:pt-6"
             >
-              <Text variant="cta-md" className="font-bold text-brand-secondary">
-                Fundador da DSR Gráfica
+              <Text
+                variant="body-lg"
+                className="text-neutral-800 font-bold"
+              >
+                Edilson Ferreira da Silva
               </Text>
-              <Text variant="body-md" className="text-neutral-800 font-medium">
-                Guarulhos desde 1992
+              <Text variant="cta-md" className="text-brand-secondary">
+                Fundador da DSR Gráfica
               </Text>
             </motion.div>
           </div>
