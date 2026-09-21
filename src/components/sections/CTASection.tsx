@@ -1,13 +1,24 @@
 import { motion } from "framer-motion";
+
 import { popIn, viewportSettings } from "@/lib/motion";
+
 import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
+import CTADecorations from "../features/CTADecorations";
+
 import { ArrowUpRight } from "@/assets/icons";
 
 export default function CTASection() {
   return (
-    <Section id="contato" className="py-16 md:py-30 lg:py-40 md:px-15 lg:px-30">
-      <div className="flex flex-col items-center text-center max-w-300 mx-auto">
+    <Section
+      id="contato"
+      className="relative py-16 md:py-30 lg:py-40 md:px-15 lg:px-30"
+    >
+      {/* Elementos decorativos */}
+      <CTADecorations />
+
+      {/* Conteúdo principal */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-300 mx-auto">
         <div className="md:py-10">
           {/* Badge Superior */}
           <motion.div

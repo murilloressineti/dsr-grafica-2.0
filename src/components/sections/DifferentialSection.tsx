@@ -73,8 +73,8 @@ export default function DifferentialSection() {
               <Text variant="cta-md" className="font-bold text-brand-secondary">
                 Fundador da DSR Gráfica
               </Text>
-              <Text variant="body-md" className="text-neutral-800 font-medium">
-                Guarulhos desde 1992
+              <Text variant="body-lg" className="text-neutral-800 font-semibold">
+                Edilson Ferreira
               </Text>
             </motion.div>
           </div>

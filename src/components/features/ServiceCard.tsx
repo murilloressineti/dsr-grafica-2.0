@@ -9,7 +9,12 @@ interface ServiceCardProps extends React.HTMLAttributes<HTMLDivElement> {
   description: string;
   items: string[];
   icon: React.ElementType;
-  className?: string;
+  colors: {
+    icon: string;
+    iconBg: string;
+    category: string;
+    bullet: string;
+  };
 }
 
 export default function ServiceCard({
@@ -18,6 +23,7 @@ export default function ServiceCard({
   description,
   items,
   icon,
+  colors,
   className,
 }: ServiceCardProps) {
   return (
@@ -27,29 +33,44 @@ export default function ServiceCard({
         className,
       )}
     >
-      <IconBox icon={icon} className="mb-9" />
+      {/* Ícone */}
+      <IconBox
+        icon={icon}
+        className={cn("mb-9", colors.iconBg)}
+        iconClassName={colors.icon}
+      />
 
-      <div className="flex flex-col gap-4 ">
-        <Text variant={"overline-md"} className="text-neutral-500">
+      {/* Conteúdo */}
+      <div className="flex flex-col gap-4">
+        <Text
+          variant="overline-md"
+          className={cn("font-semibold", colors.category)}
+        >
           {category}
         </Text>
 
-        <Text as="h3" variant={"h2"} className="w-2/3">
+        <Text as="h3" variant="h2" className="w-2/3">
           {title}
         </Text>
 
-        <Text variant={"body-md"} className="text-neutral-600">
+        <Text variant="body-md" className="text-neutral-600">
           {description}
         </Text>
       </div>
 
+      {/* Divisória */}
       <div className="w-full h-px bg-border-default my-8" />
 
+      {/* Lista de serviços */}
       <ul>
         {items.map((item, index) => (
           <li key={index} className="mb-2">
             <div className="flex items-center gap-2">
-              <Icon svg={StarService} size={"xs"}></Icon>
+              <Icon
+                svg={StarService}
+                size={"xs"}
+                className={colors.bullet}
+              ></Icon>
               <Text variant={"body-md"} className="text-neutral-600">
                 {item}
               </Text>
