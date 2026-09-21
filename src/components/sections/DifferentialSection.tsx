@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { fadeInDown, fadeInUp, viewportSettings } from "@/lib/motion";
+import { fadeInDown, viewportSettings } from "@/lib/motion";
 import { Section } from "../layout";
 import { Text, Icon } from "../ui";
 import { Quotes } from "@/assets/icons";
-import FounderImg from "@/assets/images/Founder.webp";
+//import FounderImg from "@/assets/images/Founder.webp";
 
 export default function DifferentialSection() {
   return (
