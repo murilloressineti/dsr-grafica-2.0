@@ -4,6 +4,7 @@ import { fadeInUp, fadeInDown } from "@/lib/motion";
 import { Section } from "../layout";
 import { Badge, Button, Icon, Text } from "../ui";
 import { ArrowUpRight } from "@/assets/icons";
+import HeroIllustration from "@/assets/images/hero-illustration.png";
 
 export default function HeroSection() {
   return (
@@ -16,9 +17,25 @@ export default function HeroSection() {
         className="absolute inset-0 z-0 pointer-events-none opacity-50"
         style={{
           background:
-            "radial-gradient(circle at top, #61B5DB 0%, rgba(255, 255, 255, 0) 70%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(97, 180, 219, 0.6) 0%, rgba(255, 255, 255, 0) 70%)",
         }}
       />
+
+      {/* Ilustração decorativa da Hero */}
+      <div
+        aria-hidden="true"
+        className="
+          absolute inset-0 z-0
+          hidden lg:block
+          pointer-events-none
+        "
+      >
+        <img
+          src={HeroIllustration}
+          alt=""
+          className="absolute inset-0 w-full h-full object-contain object-center"
+        />
+      </div>
 
       <div className="relative z-10 mx-auto px-6 md:px-30 flex flex-col items-center text-center">
         {/* Badges Superiores */}
@@ -40,7 +57,7 @@ export default function HeroSection() {
           animate="visible"
           custom={1}
         >
-          <Text as="h1" variant="display-xl" className="max-w-3xl mb-5">
+          <Text as="h1" variant="display-lg" className="max-w-3xl mb-5">
             Seu material impresso em horas, não em dias.
           </Text>
         </motion.div>
@@ -55,9 +72,9 @@ export default function HeroSection() {
           <Text
             variant="body-lg"
             TextColor="secondary"
-            className="max-w-4xl mb-14 md:mb-16"
+            className="max-w-3xl mb-14 md:mb-16"
           >
-            TCC, banner, panfletos, contrato, entregamos no mesmo dia. 43 anos
+            TCC, banner, panfletos, contrato, entregamos no mesmo dia. 44 anos
             de experiência com atendimento humano de verdade.
           </Text>
         </motion.div>

@@ -9,7 +9,9 @@ export const iconVariants = cva(
       animate: {
         none: "",
         rotate: "group-hover:rotate-45",
-        right: "group-hover:translate-x-1"
+        right: "group-hover:translate-x-1",
+        pulse: "group-hover:animate-pulse",
+        scale: "group-hover:scale-110",
       },
       size: {
         xs: "w-2 h2",

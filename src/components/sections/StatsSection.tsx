@@ -11,7 +11,7 @@ const stats = [
   {
     icon: Medal,
     color: "fill-brand-magenta",
-    value: "43",
+    value: "44",
     label: "Anos no mercado gráfico",
   },
   {

@@ -8,7 +8,7 @@ import { Icon, IconBox, Text } from "../ui";
 
 import { ArrowDown, Coins, Files, Package } from "@/assets/icons";
 import BGLines from "@/assets/images/BackroundLines.png";
-import Illustration from "@/assets/images/illustration.png";
+import HIWIllustration from "@/assets/images/hiw-illustration.png";
 
 interface StepProps {
   icon: React.ElementType;
@@ -76,7 +76,7 @@ export default function HowItWorks() {
       description: "Pelo WhatsApp, e-mail ou pen drive, como preferir",
       colors: {
         icon: "fill-brand-magenta",
-        iconBg: "bg-brand-magenta/30",
+        iconBg: "bg-brand-magenta/20",
       },
     },
     {
@@ -85,7 +85,7 @@ export default function HowItWorks() {
       description: "A gente confirma na hora o que é possível fazer ainda hoje",
       colors: {
         icon: "fill-brand-yellow",
-        iconBg: "bg-brand-yellow/30",
+        iconBg: "bg-brand-yellow/20",
       },
     },
     {
@@ -94,7 +94,7 @@ export default function HowItWorks() {
       description: "Na loja em Guarulhos ou combinamos a entrega",
       colors: {
         icon: "fill-brand-green",
-        iconBg: "bg-brand-green/30",
+        iconBg: "bg-brand-green/20",
       },
       isLast: true,
     },
@@ -145,7 +145,7 @@ export default function HowItWorks() {
             className="hidden lg:block absolute top-20 -left-20 w-180 pointer-events-none translate-y-20"
           >
             <img
-              src={Illustration}
+              src={HIWIllustration}
               alt="Ilustração de um celular"
               className="w-full h-full object-contain bg-bg-default"
             />

@@ -20,7 +20,7 @@ const servicesData = [
     ],
     colors: {
       icon: "fill-brand-magenta",
-      iconBg: "bg-brand-magenta/30",
+      iconBg: "bg-brand-magenta/20",
       category: "text-brand-magenta",
       bullet: "fill-brand-magenta",
     },
@@ -39,7 +39,7 @@ const servicesData = [
     ],
     colors: {
       icon: "fill-brand-yellow",
-      iconBg: "bg-brand-yellow/30",
+      iconBg: "bg-brand-yellow/20",
       category: "text-brand-yellow",
       bullet: "fill-brand-yellow",
     },
@@ -58,7 +58,7 @@ const servicesData = [
     ],
     colors: {
       icon: "fill-brand-primary",
-      iconBg: "bg-brand-primary/30",
+      iconBg: "bg-brand-primary/20",
       category: "text-brand-primary",
       bullet: "fill-brand-primary",
     },

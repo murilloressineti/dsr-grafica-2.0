@@ -6,7 +6,7 @@ import { Section } from "../layout";
 import { Button, Icon, Text } from "../ui";
 import CTADecorations from "../features/CTADecorations";
 
-import { ArrowUpRight } from "@/assets/icons";
+import { WhatsappLogo } from "@/assets/icons";
 
 export default function CTASection() {
   return (
@@ -66,14 +66,17 @@ export default function CTASection() {
             href="https://wa.me/5511982305193?text=Olá!%20Gostaria%20de%20pedir%20um%20orçamento."
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-[#19a159] hover:bg-[#0E703B]"
           >
-            Mandar mensagem no whatsapp
             <Icon
-              svg={ArrowUpRight}
-              animate="rotate"
-              className="fill-text-primary"
+              svg={WhatsappLogo}
+              animate="scale"
+              className="fill-text-inverted"
               size="md"
             />
+            <Text variant="cta-lg" className="text-text-inverted">
+              Mandar mensagem no WhatsApp
+            </Text>
           </Button>
         </motion.div>
       </div>
