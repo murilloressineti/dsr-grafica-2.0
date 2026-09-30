@@ -13,7 +13,7 @@ const servicesData = [
     description:
       "Agilidade em impressões e encadernações para seus trabalhos e projetos",
     items: [
-      "Encadernação espiral e capa dura",
+      "Encadernação espiral",
       "Impressão de TCC",
       "Cópias P&B e coloridas",
       "Digitalização de documentos",
